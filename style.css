@@ -277,7 +277,80 @@ button:hover {
         font-family: 'Courier New', Courier, monospace;
     }
 }
+.settings-button {
+    top:90px;
+    right:660px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
 
+.settings-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(20deg);
+}
+.settings-group {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.settings-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.settings-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+.settings-group input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.settings-group input[type="text"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.settings-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.save-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+}
 @media (max-width: 480px) {
     body {
         padding: 10px;
