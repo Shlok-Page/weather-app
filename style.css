@@ -65,7 +65,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: cursive, comic sans ms;
+    font-family: Arial, sans serif;
 }
 
 .weather-info h1 {
