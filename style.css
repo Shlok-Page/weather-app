@@ -182,7 +182,8 @@ button:hover {
 }
 
 .forecast-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    background-color: #ADD8E6
 }
 
 .forecast-card .day {
