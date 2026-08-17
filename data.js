@@ -7,7 +7,7 @@ const API_KEY = "1ef55a1b4cba61f3bef60c02fd098515";
 function changeUnit() {
     const select = document.getElementById("unit-select");
     currentUnit = select.value;
-    
+    localStorage.setItem("tempUnit", currentUnit);
     // Re-fetch the data with the NEW unit
     getWeather(currentCity);
     getForecast(currentCity);
@@ -287,12 +287,23 @@ function saveSettings() {
 }
 
 function loadSettings() {
+    // Load temperature unit preference
+    const savedUnit = localStorage.getItem("tempUnit");
+    if (savedUnit) {
+        currentUnit = savedUnit;
+        document.getElementById("unit-select").value = savedUnit;
+    }
+    
     // Load light mode preference
     const lightMode = localStorage.getItem("lightMode");
     if (lightMode === "true") {
         document.getElementById("light-mode-toggle").checked = true;
         document.body.classList.add("light-mode");
     }
+    
+    const savedCity = localStorage.getItem("defaultCity");
+    // ... rest of code stays the same
+}
     
     // Load default city
     const savedCity = localStorage.getItem("defaultCity");
