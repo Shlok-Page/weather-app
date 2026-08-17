@@ -9,6 +9,16 @@ h1 {
     font-family: Impact, "Arial Black", "Arial Bold", sans-serif;
     font-weight: 900;
 }
+
+body {
+    background: #0e163a;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
 .settings-top {
     position: static;
     display: flex;
@@ -59,6 +69,140 @@ h1 {
     color: white;
     padding: 6px;
 }
+
+.settings-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(20deg);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    font-family: Arial, sans serif;
+}
+
+.search-input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5252;
+}
+
+.current-weather {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.weather-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.condition {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.weather-icon {
+    font-size: 150px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.forecast-card:hover {
+    transform: translateY(-10px);
+}
+
+.forecast-card .day {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-card .icon {
+    font-size: 50px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-card .temp {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -131,127 +275,75 @@ h1 {
     color: rgba(255, 255, 255, 0.7);
     margin-left: 15px;
 }
-body {
-    background: #0e163a;
+
+.settings-group {
+    margin-bottom: 20px;
     color: white;
-    min-height: 100vh;
-    padding: 20px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-}
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    gap: 10px;
-    font-family: Arial, sans serif;
 }
 
-.search-input {
-    padding: 12px 20px;
+.settings-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.settings-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
     border: none;
-    border-radius: 25px;
-    width: 300px;
-    font-size: 16px;
-    transition: box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
 }
 
-.search-input:focus {
+.settings-group input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.settings-group input[type="text"]:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-button {
-    padding: 12px 30px;
+.settings-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.save-button {
+    width: 100%;
+    padding: 12px;
     background-color: #ff6b6b;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-button:hover {
+.save-button:hover {
     background-color: #ff5252;
+    transform: translateY(-2px);
 }
 
-.current-weather {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.weather-info h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.temperature {
-    font-size: 64px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.condition {
-    font-size: 20px;
-    opacity: 0.8;
-}
-
-.weather-icon {
-    font-size: 150px;
-}
-
-.forecast {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.forecast-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 15px;
+.footer {
     text-align: center;
-    flex: 1;
-    min-width: 150px;
-    transition: transform 0.3s ease;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.7;
+    font-size: 14px;
 }
 
-.forecast-card:hover {
-    transform: translateY(-10px);
-    background-color: skyblue;
+.footer p {
+    margin: 0;
 }
 
-.forecast-card .day {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.forecast-card .icon {
-    font-size: 50px;
-    margin: 10px 0;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.forecast-card .temp {
-    font-size: 20px;
-    opacity: 0.9;
-}
-
+/* MOBILE STYLES */
 @media (max-width: 768px) {
     .search-input {
         width: 100%;
@@ -269,88 +361,18 @@ button:hover {
     
     .forecast {
         flex-wrap: wrap;
-        font-family: 'Courier New', Courier, monospace;        
     }
     
     .forecast-card {
         flex: 1 1 calc(50% - 7.5px);
-        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .modal-content {
+        padding: 20px;
+        max-width: 90%;
     }
 }
-.settings-button {
-    top:90px;
-    right:660px;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    font-size: 18px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-}
 
-.settings-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: rotate(20deg);
-}
-.settings-group {
-    margin-bottom: 20px;
-    color: white;
-}
-
-.settings-group label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.settings-group input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 14px;
-}
-
-.settings-group input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.settings-group input[type="text"]:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.settings-group input[type="checkbox"] {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.save-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.save-button:hover {
-    background-color: #ff5252;
-    transform: translateY(-2px);
-}
 @media (max-width: 480px) {
     body {
         padding: 10px;
@@ -362,7 +384,6 @@ button:hover {
     
     .forecast-card {
         flex: 1 1 100%;
-        font-family: 'Courier New', Courier, monospace;
     }
     
     .temperature {
@@ -372,78 +393,14 @@ button:hover {
     .weather-icon {
         font-size: 100px;
     }
-}
-.settings-button {
-    top:90px;
-    right:660px;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    font-size: 18px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-}
 
-.settings-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: rotate(20deg);
-}
-.settings-group {
-    margin-bottom: 20px;
-    color: white;
-}
+    .settings-top {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.settings-group label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.settings-group input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 14px;
-}
-
-.settings-group input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.settings-group input[type="text"]:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.settings-group input[type="checkbox"] {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.save-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.save-button:hover {
-    background-color: #ff5252;
-    transform: translateY(-2px);
+    .modal-content {
+        padding: 15px;
+        max-width: 95%;
+    }
 }
