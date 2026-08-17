@@ -17,6 +17,141 @@ body {
     padding: 20px;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background: #f5f5f5;
+    color: #333;
+}
+
+body.light-mode .settings-top {
+    background: rgba(50, 50, 50, 0.15);
+    border-color: rgba(50, 50, 50, 0.2);
+}
+
+body.light-mode .settings-top label {
+    color: rgba(50, 50, 50, 0.8);
+}
+
+body.light-mode #unit-select {
+    background-color: rgba(50, 50, 50, 0.15);
+    color: #333;
+    border-color: rgba(50, 50, 50, 0.3);
+}
+
+body.light-mode #unit-select:hover {
+    background-color: rgba(50, 50, 50, 0.2);
+    border-color: rgba(50, 50, 50, 0.4);
+}
+
+body.light-mode #unit-select:focus {
+    background-color: rgba(50, 50, 50, 0.25);
+    border-color: rgba(50, 50, 50, 0.5);
+}
+
+body.light-mode #unit-select option {
+    background-color: white;
+    color: #333;
+}
+
+body.light-mode .settings-button {
+    background: rgba(50, 50, 50, 0.15);
+    color: #333;
+}
+
+body.light-mode .settings-button:hover {
+    background-color: rgba(50, 50, 50, 0.2);
+}
+
+body.light-mode .search-input {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.light-mode .search-input:focus {
+    box-shadow: 0 0 10px rgba(50, 50, 50, 0.2);
+}
+
+body.light-mode button {
+    background-color: #ff6b6b;
+}
+
+body.light-mode button:hover {
+    background-color: #ff5252;
+}
+
+body.light-mode .current-weather {
+    background: rgba(50, 50, 50, 0.1);
+    color: #333;
+}
+
+body.light-mode .forecast-card {
+    background: rgba(50, 50, 50, 0.1);
+    color: #333;
+}
+
+body.light-mode .forecast-card:hover {
+    background-color: #e0f2f1;
+}
+
+body.light-mode .modal-content {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    color: #333;
+    border-color: rgba(50, 50, 50, 0.2);
+}
+
+body.light-mode .modal-content h2 {
+    color: #333;
+}
+
+body.light-mode .close {
+    color: #333;
+}
+
+body.light-mode .hourly-item {
+    background: rgba(50, 50, 50, 0.1);
+    color: #333;
+    border-left-color: #ff6b6b;
+}
+
+body.light-mode .hourly-time {
+    color: #333;
+}
+
+body.light-mode .hourly-temp {
+    color: #ff6b6b;
+}
+
+body.light-mode .hourly-condition {
+    color: rgba(50, 50, 50, 0.7);
+}
+
+body.light-mode .settings-group {
+    color: #333;
+}
+
+body.light-mode .settings-group label {
+    color: rgba(50, 50, 50, 0.9);
+}
+
+body.light-mode .settings-group input[type="text"] {
+    background-color: rgba(50, 50, 50, 0.1);
+    color: #333;
+}
+
+body.light-mode .settings-group input[type="text"]::placeholder {
+    color: rgba(50, 50, 50, 0.5);
+}
+
+body.light-mode .settings-group input[type="text"]:focus {
+    background-color: rgba(50, 50, 50, 0.15);
+}
+
+body.light-mode .footer {
+    border-top-color: rgba(50, 50, 50, 0.2);
+    color: rgba(50, 50, 50, 0.7);
 }
 
 .settings-top {
@@ -67,7 +202,6 @@ body {
 #unit-select option {
     background-color: #0e163a;
     color: white;
-    padding: 6px;
 }
 
 .settings-button {
