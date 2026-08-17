@@ -253,58 +253,6 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 200;
-    }
-
-    .modal-content {
-        background: linear-gradient(135deg, #1a2a5e 0%, #16213e 100%);
-        padding: 20px;
-        border-radius: 15px;
-        max-width: 90%;
-        width: 100%;
-        max-height: 80vh;
-        overflow-y: auto;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
-
-    .settings-group {
-        margin-bottom: 15px;
-        color: white;
-    }
-
-    .settings-group input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 8px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.1);
-        color: white;
-        font-size: 14px;
-    }
-
-    .save-button {
-        width: 100%;
-        padding: 12px;
-        background-color: #ff6b6b;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: bold;
-    }
-}
     .search-input {
         width: 100%;
     }
