@@ -287,6 +287,14 @@ function saveSettings() {
 }
 
 function loadSettings() {
+    // Load light mode preference
+    const lightMode = localStorage.getItem("lightMode");
+    if (lightMode === "true") {
+        document.getElementById("light-mode-toggle").checked = true;
+        document.body.classList.add("light-mode");
+    }
+    
+    // Load default city
     const savedCity = localStorage.getItem("defaultCity");
     
     if (savedCity) {
@@ -294,10 +302,24 @@ function loadSettings() {
         getWeather(savedCity);
         getForecast(savedCity);
     } else {
-        // If no saved city, load New York by default
         currentCity = "New York";
         getWeather("New York");
         getForecast("New York");
+    }
+}
+function toggleLightMode() {
+    const toggle = document.getElementById("light-mode-toggle");
+    
+    if (toggle.checked) {
+        // Light mode ON
+        document.body.classList.add("light-mode");
+        localStorage.setItem("lightMode", "true");
+        console.log("Light mode ON");
+    } else {
+        // Dark mode ON (default)
+        document.body.classList.remove("light-mode");
+        localStorage.setItem("lightMode", "false");
+        console.log("Light mode OFF");
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
