@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaCast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="data.js"></script>
+    <h1 style="text-align: center;">ClimaCast</h1>
+    <br>
+    <div class="settings-top">
+        <label for="unit-select">TEMPERATURE UNIT:</label>
+        <select id="unit-select" onchange="changeUnit()">
+            <option value="imperial">Fahrenheit (°F)</option>
+            <option value="metric">Celsius (°C)</option>
+        </select>
+        <button class="settings-button" onclick="openSettings()">⚙️</button>
+    </div>
+    <br>
+    <div class="search-container">
+        <input type="text" placeholder="Enter city name..." class="search-input" style="font-family: 'Pacifico', 'Brush Script MT', 'Comic Sans MS', cursive;">
+        <button onclick="handleSearch()">Search</button>
+    </div>
+
+    <div class="current-weather" onclick="showTodayHourly()" style="cursor: pointer;">
+        <div class="weather-info">
+            <h1 style="font-family: 'Courier New', Courier, monospace;">Loading...</h1>
+            <p class="temperature">--°F</p>
+            <p class="condition">Fetching live data...</p>
+        </div>
+        <div class="weather-icon">⏳</div>
+    </div>
+
+
+    <div class="forecast">
+    <div class="forecast-card" style ="font-family: 'Courier New', Courier, monospace;" onclick="showHourlyDetails(0)">
+        <p class="day">Monday</p>
+        <p class="icon">☀️</p>
+        <p class="temp">75°F</p>
+    </div>
+        
+    <div class="forecast-card" style ="font-family: 'Courier New', Courier, monospace;" onclick="showHourlyDetails(1)">
+        <p class="day">Tuesday</p>
+        <p class="icon">⛅</p>
+        <p class="temp">72°F</p>
+    </div>
+        
+    <div class="forecast-card" style ="font-family: 'Courier New', Courier, monospace;" onclick="showHourlyDetails(2)">
+        <p class="day">Wednesday</p>
+        <p class="icon">🌧️</p>
+        <p class="temp">65°F</p>
+    </div>
+        
+    <div class="forecast-card" style ="font-family: 'Courier New', Courier, monospace;" onclick="showHourlyDetails(3)">
+        <p class="day">Thursday</p>
+        <p class="icon">⛈️</p>
+        <p class="temp">60°F</p>
+    </div>
+        
+    <div class="forecast-card" style ="font-family: 'Courier New', Courier, monospace;" onclick="showHourlyDetails(4)">
+        <p class="day">Friday</p>
+        <p class="icon">☀️</p>
+        <p class="temp">78°F</p>
+    </div>
+    </div>
+    <footer class="footer" style = "text-align: center; font-family: Arial, Helvetica, sans-serif">
+        <br><br><br>
+        <pre><i><b>© 2026</b>: Created by Shlok Page</i></pre>
+        <br>
+    </footer>
+    <div id="hourly-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Monday, Aug 18</h2>
+            <div id="hourly-list"></div>
+        </div>
+    </div>
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeSettings()">&times;</span>
+            <h2>Settings</h2>
+            
+            <div class="settings-group">
+                <label>Default City:</label>
+                <input type="text" id="default-city" placeholder="Enter city name..." style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-top: 8px;">
+            </div>
+
+            <div class="settings-group">
+                <label>
+                    <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+                    Dark Mode
+                </label>
+            </div>
+
+            <button class="save-button" onclick="saveSettings()">Save Preferences</button>
+        </div>
+    </div>
+</body>
+</html>
