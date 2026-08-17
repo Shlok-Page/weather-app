@@ -185,7 +185,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Arial, sans serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .weather-info h1 {
