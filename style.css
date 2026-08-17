@@ -394,11 +394,6 @@ button:hover {
         font-size: 100px;
     }
 
-    .settings-top {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .modal-content {
         padding: 15px;
         max-width: 95%;
